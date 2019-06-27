@@ -2,6 +2,8 @@
 
 A library to add pagination to your data. It is very simple and easy to use.
 
+![Pagination](assets/default.png)
+
 ## Installation
 Use the node package manager [npm](https://www.npmjs.com/) to install pagination-cp
 ```
@@ -37,20 +39,25 @@ You can refer dist/index.html for full example.
 <body>
 <div id="page-table">
     <div>
-        <div class="page-rows"><h3>1</h3></div>
-        <div class="page-rows"><h3>2</h3></div>
-        <div class="page-rows"><h3>3</h3></div>
-        <div class="page-rows"><h3>4</h3></div>
-        <div class="page-rows"><h3>5</h3></div>
-        <div class="page-rows"><h3>6</h3></div>
-        <div class="page-rows"><h3>7</h3></div>
+        <div class="page-rows"><h3>Row 1</h3></div>
+        <div class="page-rows"><h3>Row 2</h3></div>
+        <div class="page-rows"><h3>Row 3</h3></div>
+        <div class="page-rows"><h3>Row 4</h3></div>
+        <div class="page-rows"><h3>Row 5</h3></div>
+        <div class="page-rows"><h3>Row 6</h3></div>
+        <div class="page-rows"><h3>Row 7</h3></div>
+        <div class="page-rows"><h3>Row 8</h3></div>
+        <div class="page-rows"><h3>Row 9</h3></div>
+        <div class="page-rows"><h3>Row 10</h3></div>
+        <div class="page-rows"><h3>Row 11</h3></div>
+        <div class="page-rows"><h3>Row 12</h3></div>
     </div>
     <ul class="pagination">
     </ul>
 </div>
 </body>
 ```
-Default pagination:
+#### Default pagination:
 ![default](assets/default_pagination.png)
 ```javascript
 pagination.getPagination({
@@ -59,8 +66,8 @@ pagination.getPagination({
     maxRows: 10  //default 5
 });
 ```
-Show first and last buttons:
-![first_last_btn](assets/first_last_btns.png)
+#### Show first and last buttons:
+![first_last_btn](assets/first_last_btn.png)
 ```javascript
 pagination.getPagination({
     tableId: 'page-table',
@@ -70,18 +77,26 @@ pagination.getPagination({
     showLastBtn: true,
 });
 ```
-Without buttons:
-![no_buttons](assets/no_buttons.png)
+#### Without Previous and next buttons:
+![no_buttons](assets/without_prev_next_btn.png)
 ```javascript
 pagination.getPagination({
     tableId: 'page-table',
     rowClass: 'page-rows',
     maxRows: 5,
+    showFirstBtn: true,
+    showLastBtn: true,
     showPreviousBtn: false,
     showNextBtn: false,
 });
 ```
 
+#### with border:
+![without_border](assets/bordered_pagination.png)
+```html
+<ul class="pagination pagination-bordered">
+</ul>
+```
 ## Options
 ```
 tableId         => required  => An id of div wrapping your rows and pagination ul
