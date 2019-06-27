@@ -138,8 +138,8 @@ export default class Pagination {
 
     getPagination(data) {
         this.currentPage = 1;
-        this.maxRows = data.maxRows ? data.maxRows : this.maxRows;
         this.allRows = $(`#${data.tableId} .${data.rowClass}`);
+        this.maxRows = typeof data.maxRows !== "undefined" ? data.maxRows : this.maxRows;
         this.showFirstBtn = typeof data.showFirstBtn !== "undefined" ? data.showFirstBtn : this.showFirstBtn;
         this.showLastBtn = typeof data.showLastBtn !== "undefined" ? data.showLastBtn : this.showLastBtn;
         this.showPreviousBtn = typeof data.showPreviousBtn !== "undefined" ? data.showPreviousBtn : this.showPreviousBtn;
