@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pagination</title>
+    <style>
+        .page-rows {
+            width: 200px;
+            background-color: lightsteelblue;
+            margin: 5px;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+
+<div id="page-table">
+    <div>
+        <div class="page-rows"><h3>1</h3></div>
+        <div class="page-rows"><h3>2</h3></div>
+        <div class="page-rows"><h3>3</h3></div>
+        <div class="page-rows"><h3>4</h3></div>
+        <div class="page-rows"><h3>5</h3></div>
+        <div class="page-rows"><h3>6</h3></div>
+        <div class="page-rows"><h3>7</h3></div>
+        <div class="page-rows"><h3>8</h3></div>
+        <div class="page-rows"><h3>9</h3></div>
+        <div class="page-rows"><h3>10</h3></div>
+        <div class="page-rows"><h3>11</h3></div>
+        <div class="page-rows"><h3>12</h3></div>
+    </div>
+    <ul class=".pagination">
+    </ul>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        let page = new Pagination();
+        page.getPagination({
+            tableId: 'page-table',
+            rowClass: 'page-rows',
+            maxRows: 5
+        });
+    })
+</script>
+<script type="text/javascript" src="index.js"></script></body>
+</html>
