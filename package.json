@@ -1,5 +1,5 @@
 {
-  "name": "pagination",
+  "name": "pagination-cp",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/captainpauu/pagination.git"
+    "url": "git+https://github.com/captainpauu/pagination-cp.git"
   },
   "author": "Pravin Dhange <pravin.dhange1905@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/captainpauu/pagination/issues"
+    "url": "https://github.com/captainpauu/pagination-cp/issues"
   },
-  "homepage": "https://github.com/captainpauu/pagination#readme",
+  "homepage": "https://github.com/captainpauu/pagination-cp#readme",
   "devDependencies": {
     "@babel/core": "^7.4.5",
     "autoprefixer": "^9.6.0",
