@@ -10,8 +10,9 @@
             width: 500px;
         }
         .page-rows {
+
             background-color: lightsteelblue;
-            margin: 5px;
+            margin: 2px;
             color: #000;
             text-align: center;
         }
@@ -21,18 +22,18 @@
 
 <div id="page-table">
     <div>
-        <div class="page-rows"><h3>1</h3></div>
-        <div class="page-rows"><h3>2</h3></div>
-        <div class="page-rows"><h3>3</h3></div>
-        <div class="page-rows"><h3>4</h3></div>
-        <div class="page-rows"><h3>5</h3></div>
-        <div class="page-rows"><h3>6</h3></div>
-        <div class="page-rows"><h3>7</h3></div>
-        <div class="page-rows"><h3>8</h3></div>
-        <div class="page-rows"><h3>9</h3></div>
-        <div class="page-rows"><h3>10</h3></div>
-        <div class="page-rows"><h3>11</h3></div>
-        <div class="page-rows"><h3>12</h3></div>
+        <div class="page-rows"><h3>Row 1</h3></div>
+        <div class="page-rows"><h3>Row 2</h3></div>
+        <div class="page-rows"><h3>Row 3</h3></div>
+        <div class="page-rows"><h3>Row 4</h3></div>
+        <div class="page-rows"><h3>Row 5</h3></div>
+        <div class="page-rows"><h3>Row 6</h3></div>
+        <div class="page-rows"><h3>Row 7</h3></div>
+        <div class="page-rows"><h3>Row 8</h3></div>
+        <div class="page-rows"><h3>Row 9</h3></div>
+        <div class="page-rows"><h3>Row 10</h3></div>
+        <div class="page-rows"><h3>Row 11</h3></div>
+        <div class="page-rows"><h3>Row 12</h3></div>
     </div>
     <ul class="pagination pagination-bordered">
     </ul>
@@ -43,9 +44,7 @@
         page.getPagination({
             tableId: 'page-table',
             rowClass: 'page-rows',
-            maxRows: 5,
-            showFirstBtn: true,
-            showLastBtn: true
+            maxRows: 3
         });
     })
 </script>
