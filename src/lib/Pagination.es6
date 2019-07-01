@@ -6,7 +6,9 @@ export default class Pagination {
         this.currentPage = 1;
         this.lastPage = 1;
         this.maxRows = 5;
+        this.tableId = '';
         this.allRows = '';
+        this.totalRows = 0;
         this.showFirstBtn = false;
         this.showLastBtn = false;
         this.showPreviousBtn = true;
@@ -68,28 +70,30 @@ export default class Pagination {
             + `</li>`;
     }
 
-    createPagination(table) {
-        let pagination = $(`#${table} .pagination`);
-        let totalRows = this.allRows.length;
+    extraPageItem() {
+        return `<li class="page-item">`
+            + `<a class="page-link disabled">...</a>`
+            + `</li>`;
+    }
+
+    createPagination() {
+        let pagination = $(`#${this.tableId} .pagination`);
         let html = '';
 
-        if (totalRows > this.maxRows) {
-            if(this.showFirstBtn) {
+        if (this.totalRows > this.maxRows) {
+            if (this.showFirstBtn) {
                 html += this.firstBtnPageItem();
             }
-            if(this.showPreviousBtn) {
+            if (this.showPreviousBtn) {
                 html += this.previousBtnPageItem();
             }
 
-            this.lastPage = Math.ceil(totalRows / this.maxRows);
-            for (let i = 1; i <= this.lastPage; i++) {
-                html += this.pageItem(i);
-            }
+            html += this.createPageItems();
 
-            if(this.showNextBtn) {
+            if (this.showNextBtn) {
                 html += this.nextBtnPageItem();
             }
-            if(this.showLastBtn){
+            if (this.showLastBtn) {
                 html += this.lastBtnPageItem();
             }
 
@@ -100,11 +104,41 @@ export default class Pagination {
         }
     }
 
+    createPageItems() {
+        let html = '';
+        this.lastPage = Math.ceil(this.totalRows / this.maxRows);
+
+        if (this.currentPage <= 5) {
+            for (let i = 1; i <= 5; i++) {
+                html += this.pageItem(i);
+            }
+            if (this.lastPage > 5) {
+                html += this.extraPageItem();
+            }
+        } else if (this.currentPage > 5 && this.currentPage < this.lastPage - 4) {
+            html += this.extraPageItem();
+            for (let i = this.currentPage - 2; i <= this.currentPage + 2; i++) {
+                html += this.pageItem(i);
+            }
+            html += this.extraPageItem();
+        } else if (this.currentPage >= this.lastPage - 4) {
+            html += this.extraPageItem();
+            for (let i = this.lastPage - 4; i <= this.lastPage; i++) {
+                html += this.pageItem(i);
+            }
+        }
+
+        return html;
+    }
+
     pageChanged(pageNum) {
         $('.pagination .page-item a[data-number=' + this.currentPage + ']').removeClass('active');
+
         this.currentPage = pageNum;
+        this.createPagination(this.tableId);
+
         $('.pagination .page-item a[data-number=' + pageNum + ']').addClass('active');
-        if (this.currentPage === 1){
+        if (this.currentPage === 1) {
             $('.pagination #previous-btn').addClass('disabled');
             $('.pagination #first-btn').addClass('disabled');
         } else {
@@ -112,7 +146,7 @@ export default class Pagination {
             $('.pagination #first-btn').removeClass('disabled');
         }
 
-        if (this.currentPage === this.lastPage){
+        if (this.currentPage === this.lastPage) {
             $('.pagination #next-btn').addClass('disabled');
             $('.pagination #last-btn').addClass('disabled');
         } else {
@@ -138,14 +172,15 @@ export default class Pagination {
 
     getPagination(data) {
         this.currentPage = 1;
+        this.tableId = data.tableId;
         this.allRows = $(`#${data.tableId} .${data.rowClass}`);
+        this.totalRows = this.allRows.length;
         this.maxRows = typeof data.maxRows !== "undefined" ? data.maxRows : this.maxRows;
         this.showFirstBtn = typeof data.showFirstBtn !== "undefined" ? data.showFirstBtn : this.showFirstBtn;
         this.showLastBtn = typeof data.showLastBtn !== "undefined" ? data.showLastBtn : this.showLastBtn;
         this.showPreviousBtn = typeof data.showPreviousBtn !== "undefined" ? data.showPreviousBtn : this.showPreviousBtn;
         this.showNextBtn = typeof data.showNextBtn !== "undefined" ? data.showNextBtn : this.showNextBtn;
 
-        this.createPagination(data.tableId);
         this.pageChanged(this.currentPage);
     }
 }

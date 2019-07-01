@@ -2,7 +2,7 @@
 
 A library to add pagination to your data. It is very simple and easy to use.
 
-![Pagination](assets/default.png)
+![Pagination](assets/default_complete_paginate.png)
 
 ## Installation
 Use the node package manager [npm](https://www.npmjs.com/) to install pagination-cp
@@ -58,7 +58,7 @@ You can refer dist/index.html for full example.
 </body>
 ```
 #### Default pagination:
-![default](assets/default_pagination.png)
+![default](assets/default_paginate.png)
 ```javascript
 pagination.getPagination({
     tableId: 'page-table',
@@ -92,7 +92,9 @@ pagination.getPagination({
 ```
 
 #### with border:
-![without_border](assets/bordered_pagination.png)
+![without_border](assets/bordered_paginate.png)
+
+Add class `pagination-bordered` to ul tag
 ```html
 <ul class="pagination pagination-bordered">
 </ul>
