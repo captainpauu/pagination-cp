@@ -7,7 +7,7 @@
     <title>Pagination</title>
     <style>
         #page-table {
-            width: 500px;
+            width: 600px;
         }
         .page-rows {
 
@@ -17,6 +17,16 @@
             text-align: center;
         }
     </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let page = new Pagination();
+            page.getPagination({
+                tableId: 'page-table',
+                rowClass: 'page-rows',
+                maxRows: 3
+            });
+        })
+    </script>
 </head>
 <body>
 
@@ -34,19 +44,38 @@
         <div class="page-rows"><h3>Row 10</h3></div>
         <div class="page-rows"><h3>Row 11</h3></div>
         <div class="page-rows"><h3>Row 12</h3></div>
+        <div class="page-rows"><h3>Row 13</h3></div>
+        <div class="page-rows"><h3>Row 14</h3></div>
+        <div class="page-rows"><h3>Row 15</h3></div>
+        <div class="page-rows"><h3>Row 16</h3></div>
+        <div class="page-rows"><h3>Row 17</h3></div>
+        <div class="page-rows"><h3>Row 18</h3></div>
+        <div class="page-rows"><h3>Row 19</h3></div>
+        <div class="page-rows"><h3>Row 20</h3></div>
+        <div class="page-rows"><h3>Row 21</h3></div>
+        <div class="page-rows"><h3>Row 22</h3></div>
+        <div class="page-rows"><h3>Row 23</h3></div>
+        <div class="page-rows"><h3>Row 24</h3></div>
+        <div class="page-rows"><h3>Row 25</h3></div>
+        <div class="page-rows"><h3>Row 26</h3></div>
+        <div class="page-rows"><h3>Row 27</h3></div>
+        <div class="page-rows"><h3>Row 28</h3></div>
+        <div class="page-rows"><h3>Row 29</h3></div>
+        <div class="page-rows"><h3>Row 30</h3></div>
+        <div class="page-rows"><h3>Row 31</h3></div>
+        <div class="page-rows"><h3>Row 32</h3></div>
+        <div class="page-rows"><h3>Row 33</h3></div>
+        <div class="page-rows"><h3>Row 34</h3></div>
+        <div class="page-rows"><h3>Row 35</h3></div>
+        <div class="page-rows"><h3>Row 36</h3></div>
+        <div class="page-rows"><h3>Row 37</h3></div>
+        <div class="page-rows"><h3>Row 38</h3></div>
+        <div class="page-rows"><h3>Row 39</h3></div>
+        <div class="page-rows"><h3>Row 40</h3></div>
+
     </div>
     <ul class="pagination pagination-bordered">
     </ul>
 </div>
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        let page = new Pagination();
-        page.getPagination({
-            tableId: 'page-table',
-            rowClass: 'page-rows',
-            maxRows: 3
-        });
-    })
-</script>
 </body>
 </html>
