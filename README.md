@@ -2,6 +2,8 @@
 
 A library to add pagination to your data. It is very simple and easy to use.
 
+Want to see how it functions, [Click me](https://jsfiddle.net/captainpauu/d6fg0hea/1/).
+
 ![Pagination](assets/default_complete_paginate.png)
 
 ## Installation
