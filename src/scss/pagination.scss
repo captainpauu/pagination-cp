@@ -1,30 +1,43 @@
+$blue: #4385f5;
+$red: #fb3548;
+$green: #2abbac;
+$dark: #2e2e2e;
+$orange: #fa6f01;
+$purple: #5d35b0;
+
+@mixin applyColor($color) {
+  a:hover,
+  a.active {
+    background-color: $color;
+  }
+}
+
 .pagination {
   font-family: sans-serif;
-  display: inline-block;
-  margin: 15px;
+  margin: 15px 0;
   float: right;
 
   .page-item {
     display: inline-block;
+    margin: 0 3px;
 
     a {
-      color: #263544;
+      color: rgba(46, 46, 46, 0.8);
+      font-size: 15px;
       padding: 8px 12px;
       cursor: pointer;
-      border: none;
-      -webkit-border-radius: 5px;
-      -moz-border-radius: 5px;
-      border-radius: 5px;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      border-radius: 4px;
     }
 
     a.active {
-      color: #007bff;
-      background-color: transparent;
+      color: #fff;
+      border: none !important;
     }
 
     a:hover {
-      color: #ff595a !important;
-      background-color: lighten(#babfc4, 18%);
+      color: #fff !important;
     }
 
     a.disabled {
@@ -32,26 +45,71 @@
       cursor: default;
       pointer-events: none;
     }
+
+    @include applyColor($blue);
+
+    &#go-to-page {
+      border-left: 1px solid rgba(46, 46, 46, 0.3);
+      padding: 0 5px;
+
+      #go-to-page-label {
+        color: rgba(46, 46, 46, 0.8);
+        font-size: 15px;
+        margin-right: 5px;
+      }
+
+      #go-to-page-input {
+        color: rgba(46, 46, 46, 0.8);
+        width: 30px;
+        font-size: 15px;
+        padding: 5px 6px;
+        border: 1px solid rgba(46, 46, 46, 0.3);
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+      }
+    }
   }
 
   &.pagination-bordered {
     .page-item {
       a {
-        border: 1px solid #babfc4;
-        border-radius: 0;
-        border-right: none;
-      }
-
-      &:first-child a {
-        border-bottom-left-radius: 5px;
-        border-top-left-radius: 5px;
-      }
-
-      &:last-child a {
-        border-bottom-right-radius: 5px;
-        border-top-right-radius: 5px;
-        border-right: 1px solid #babfc4;
+        border-width: 1px;
+        border-style: solid;
+        border-color: rgba(46, 46, 46, 0.1);
       }
     }
+  }
+
+  &.circular {
+    .page-item {
+      a {
+        border-radius: 20px;
+      }
+    }
+  }
+
+  &.color--blue {
+    @include applyColor($blue);
+  }
+
+  &.color--red {
+    @include applyColor($red);
+  }
+
+  &.color--green {
+    @include applyColor($green);
+  }
+
+  &.color--dark {
+    @include applyColor($dark);
+  }
+
+  &.color--orange {
+    @include applyColor($orange);
+  }
+
+  &.color--purple {
+    @include applyColor($purple);
   }
 }

@@ -40,20 +40,27 @@ You can refer dist/index.html for full example.
  ```html
 <body>
 <div id="page-table">
-    <div>
-        <div class="page-rows"><h3>Row 1</h3></div>
-        <div class="page-rows"><h3>Row 2</h3></div>
-        <div class="page-rows"><h3>Row 3</h3></div>
-        <div class="page-rows"><h3>Row 4</h3></div>
-        <div class="page-rows"><h3>Row 5</h3></div>
-        <div class="page-rows"><h3>Row 6</h3></div>
-        <div class="page-rows"><h3>Row 7</h3></div>
-        <div class="page-rows"><h3>Row 8</h3></div>
-        <div class="page-rows"><h3>Row 9</h3></div>
-        <div class="page-rows"><h3>Row 10</h3></div>
-        <div class="page-rows"><h3>Row 11</h3></div>
-        <div class="page-rows"><h3>Row 12</h3></div>
-    </div>
+    <table class="tftable">
+            <tr>
+                <th>Header 1</th>
+                <th>Header 2</th>
+            </tr>
+            <tr class="page-rows">
+                <td>Row:1 Cell:1</td>
+                <td>Row:1 Cell:2</td>
+            </tr>
+            <tr class="page-rows">
+                <td>Row:2 Cell:1</td>
+                <td>Row:2 Cell:2</td>
+            </tr>
+            .
+            .
+            .
+            <tr class="page-rows">
+                <td>Row:2 Cell:1</td>
+                <td>Row:2 Cell:2</td>
+            </tr>
+    </table>
     <ul class="pagination">
     </ul>
 </div>

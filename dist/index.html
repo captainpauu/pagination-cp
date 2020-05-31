@@ -1,37 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Pagination</title>
     <style>
-        #page-table {
-            width: 600px;
-        }
-        .page-rows {
-
-            background-color: lightsteelblue;
-            margin: 2px;
-            color: #000;
-            text-align: center;
-        }
+      .page-rows {
+        background-color: lightsteelblue;
+        margin: 2px;
+        color: #000;
+        text-align: center;
+      }
     </style>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            let page = new Pagination();
-            page.getPagination({
-                tableId: 'page-table',
-                rowClass: 'page-rows',
-                maxRows: 3
-            });
-        })
+      document.addEventListener("DOMContentLoaded", function () {
+        let page = new Pagination();
+        page.getPagination({
+          tableId: "page-table",
+          rowClass: "page-rows",
+          maxRows: 3,
+          firstBtn: {
+            display: true,
+            label: "Start",
+          },
+          lastBtn: {
+            display: true,
+            label: "End",
+          },
+        });
+      });
     </script>
-</head>
-<body>
-
-<div id="page-table">
-    <div>
+  </head>
+  <body>
+    <div id="page-table">
+      <div>
         <div class="page-rows"><h3>Row 1</h3></div>
         <div class="page-rows"><h3>Row 2</h3></div>
         <div class="page-rows"><h3>Row 3</h3></div>
@@ -72,10 +75,8 @@
         <div class="page-rows"><h3>Row 38</h3></div>
         <div class="page-rows"><h3>Row 39</h3></div>
         <div class="page-rows"><h3>Row 40</h3></div>
-
+      </div>
+      <ul class="pagination"></ul>
     </div>
-    <ul class="pagination pagination-bordered">
-    </ul>
-</div>
-<script type="text/javascript" src="index.js"></script></body>
+  <script type="text/javascript" src="index.js"></script></body>
 </html>
