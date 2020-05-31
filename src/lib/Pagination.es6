@@ -131,13 +131,13 @@ export default class Pagination {
                 `<a class="page-link" data-number="">${pageNum} of ${this.lastPage}</a>` +
                 `</li>`
             );
-        } else if (this.theme === MICRO_THEME) {
+        } else if (this.theme === MINI_THEME) {
             return (
                 `<li class="page-item">` +
                 `<a class="page-link" data-number="">${pageNum}</a>` +
                 `</li>`
             );
-        } else if (this.theme === MINI_THEME) {
+        } else if (this.theme === MICRO_THEME) {
             return "";
         }
     }
@@ -287,6 +287,8 @@ export default class Pagination {
         this.allRows = $(`#${data.tableId} .${data.rowClass}`);
         this.totalRows = this.allRows.length;
         this.maxRows = typeof data.maxRows !== "undefined" ? data.maxRows : this.maxRows;
+        this.showFirstPageNum = typeof data.showFirstPageNum !== "undefined" ? data.showFirstPageNum : this.showFirstPageNum;
+        this.showLastPageNum = typeof data.showLastPageNum !== "undefined" ? data.showLastPageNum : this.showLastPageNum;
 
         if (typeof data.theme !== "undefined" &&
             $.inArray(data.theme, [

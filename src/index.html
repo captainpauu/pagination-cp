@@ -46,22 +46,21 @@
             background-color: #ffffff;
         }
     </style>
+
+    <!-- Add below script to your html to initialise pagination-->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             let page = new Pagination();
             page.getPagination({
                 tableId: "page-table",
                 rowClass: "page-rows",
-                maxRows: 8,
-                theme: "standard",
-                goToPageBtn: {
-                    display: true,
-                },
+                maxRows: 5,
             });
         });
     </script>
 </head>
 <body>
+<!-- Div containing rows and pagination ul element -->
 <div id="page-table">
     <table class="tftable">
         <tr>
@@ -766,7 +765,7 @@
         </tr>
     </table>
 
-    <ul class="pagination circular"></ul>
+    <ul class="pagination"></ul>
 </div>
 </body>
 </html>
