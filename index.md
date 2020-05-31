@@ -5,6 +5,7 @@ It supports simple to standard pagination UI and available in multiple colors.
 
 ![Pagination](assets/default_pagination.png)
 
+
 ## Installation
 Use the node package manager [npm](https://www.npmjs.com/) to install pagination-cp
 ```
@@ -205,6 +206,6 @@ Available colors
 | showFirstPageNum | - | Boolean | Optional | false | Always show first page number|
 | showLastPageNum | - | Boolean | Optional | false | Always show last page number|
 
-##Feedback
+## Feedback
 For issues or suggestions please see [pagination-cp](https://github.com/captainpauu/pagination-cp) on Github.
 Thank You for your support!
