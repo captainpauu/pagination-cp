@@ -56,7 +56,9 @@ Refer dist/index.html for full example.
 </div>
 </body>
 ```
+
 ## Usage
+
 JavaScript
 ```
 let pagination = new Pagination();
@@ -68,6 +70,7 @@ import Pagination from 'pagination-cp'
 ```
 
 ### JS
+
 #### Default pagination:
 ![default](assets/option_default.png)
 ```javascript
@@ -77,6 +80,7 @@ pagination.getPagination({
     maxRows: 5
 });
 ```
+
 #### Different Themes:
 ```javascript
 pagination.getPagination({
@@ -86,6 +90,7 @@ pagination.getPagination({
     theme: 'basic'
 });
 ```
+
 | Theme option | UI |
 | --- | :---: |
 | micro| ![micro_theme](assets/theme_micro.png) |
@@ -110,6 +115,7 @@ pagination.getPagination({
     }
 });
 ```
+
 #### Without Previous and next buttons:
 ![no_buttons](assets/option_prev_next.png)
 ```javascript
@@ -125,6 +131,7 @@ pagination.getPagination({
     }
 });
 ```
+
 #### Always show Fist and Last Page number:
 ![first_last_page_num](assets/option_first_last_page_num.png)
 ```javascript
@@ -136,6 +143,7 @@ pagination.getPagination({
     showLastPageNum: true,
 });
 ```
+
 #### Add Go To Page:
 ![first_last_page_num](assets/option_go_to_page.png)
 ```javascript
@@ -150,7 +158,8 @@ pagination.getPagination({
 });
 ```
 
-###CSS
+### CSS
+
 #### With Border:
 ![without_border](assets/bordered_pagination.png)
 
@@ -175,6 +184,7 @@ Add class `color--<color-name>` to ul tag
 <ul class="pagination color--green">
 </ul>
 ```
+
 Available colors
 
 | Color | Value | UI |
@@ -187,6 +197,7 @@ Available colors
 | color--purple | #5d35b0 | ![color_purple](assets/color_purple.png) |
 
 ## Options
+
 | Option | Sub-Option | Type | Required? | Default | Description |
 | :--- | --- | --- | --- | :---: | --- |
 | tableId | - | String | Required | - | An id of div wrapping all rows and pagination ul element|
