@@ -65,7 +65,7 @@ let pagination = new Pagination();
 page.getPagination({options});
 ```
 For ES6 add following line
-```ecmascript 6
+```
 import Pagination from 'pagination-cp'
 ```
 
