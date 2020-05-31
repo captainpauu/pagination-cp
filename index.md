@@ -64,7 +64,9 @@ JavaScript
 let pagination = new Pagination();
 page.getPagination({options});
 ```
+
 For ES6 add following line
+
 ```
 import Pagination from 'pagination-cp'
 ```
