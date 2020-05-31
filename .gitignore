@@ -1,5 +1,2 @@
 .idea
 node_modules
-.babelrc
-webpack.config.js
-postcss.config.js
