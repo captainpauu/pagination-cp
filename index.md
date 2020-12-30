@@ -3,7 +3,7 @@
 A plugin to add pagination to your data. It is very simple and easy to use with many customizable options.
 It supports simple to standard pagination UI and available in multiple colors.
 
-![Pagination](assets/default_pagination.png)
+![Pagination](https://user-images.githubusercontent.com/50410774/103346711-d69e4080-4aba-11eb-9505-922243f97d07.png)
 
 
 ## Installation
@@ -74,7 +74,7 @@ import Pagination from 'pagination-cp'
 ### JS
 
 #### Default pagination:
-![default](assets/option_default.png)
+![default](https://user-images.githubusercontent.com/50410774/103346797-22e98080-4abb-11eb-8e09-15a92dd94b67.png)
 ```javascript
 pagination.getPagination({
     tableId: 'page-table',
@@ -95,13 +95,13 @@ pagination.getPagination({
 
 | Theme option | UI |
 | --- | :---: |
-| micro| ![micro_theme](assets/theme_micro.png) |
-| mini | ![mini_theme](assets/theme_mini.png) |
-| basic| ![basic_theme](assets/theme_basic.png) |
-| standard| ![standard_theme](assets/option_default.png) |
+| micro| ![micro_theme](https://user-images.githubusercontent.com/50410774/103346828-3b599b00-4abb-11eb-978e-f0b4a88eed43.png) |
+| mini | ![mini_theme](https://user-images.githubusercontent.com/50410774/103346840-47ddf380-4abb-11eb-849c-b076659c3ab2.png) |
+| basic| ![basic_theme](https://user-images.githubusercontent.com/50410774/103346862-575d3c80-4abb-11eb-8140-caaa077d7143.png) |
+| standard| ![standard_theme](https://user-images.githubusercontent.com/50410774/103346797-22e98080-4abb-11eb-8e09-15a92dd94b67.png) |
 
 #### Show first and last buttons:
-![first_last_btn](assets/default_pagination.png)
+![first_last_btn](https://user-images.githubusercontent.com/50410774/103346711-d69e4080-4aba-11eb-9505-922243f97d07.png)
 ```javascript
 pagination.getPagination({
     tableId: 'page-table',
@@ -119,7 +119,7 @@ pagination.getPagination({
 ```
 
 #### Without Previous and next buttons:
-![no_buttons](assets/option_prev_next.png)
+![no_buttons](https://user-images.githubusercontent.com/50410774/103346952-925f7000-4abb-11eb-8fe1-87ef3b2d9802.png)
 ```javascript
 pagination.getPagination({
     tableId: 'page-table',
@@ -135,7 +135,7 @@ pagination.getPagination({
 ```
 
 #### Always show Fist and Last Page number:
-![first_last_page_num](assets/option_first_last_page_num.png)
+![first_last_page_num](https://user-images.githubusercontent.com/50410774/103346982-a1462280-4abb-11eb-9707-dc94719f9c4f.png)
 ```javascript
 pagination.getPagination({
     tableId: 'page-table',
@@ -147,7 +147,7 @@ pagination.getPagination({
 ```
 
 #### Add Go To Page:
-![first_last_page_num](assets/option_go_to_page.png)
+![first_last_page_num](https://user-images.githubusercontent.com/50410774/103346999-adca7b00-4abb-11eb-85cf-0128332b7083.png)
 ```javascript
 pagination.getPagination({
     tableId: "page-table",
@@ -163,7 +163,7 @@ pagination.getPagination({
 ### CSS
 
 #### With Border:
-![without_border](assets/bordered_pagination.png)
+![without_border](https://user-images.githubusercontent.com/50410774/103347012-ba4ed380-4abb-11eb-9b66-9582f439ad24.png)
 
 Add class `pagination-bordered` to ul tag
 ```html
@@ -172,7 +172,7 @@ Add class `pagination-bordered` to ul tag
 ```
 
 #### Circular Page Items:
-![circular](assets/circular_pagination.png)
+![circular](https://user-images.githubusercontent.com/50410774/103347035-c6d32c00-4abb-11eb-99b0-23b7c9cc53e3.png)
 
 Add class `circular` to ul tag
 ```html
@@ -191,12 +191,12 @@ Available colors
 
 | Color | Value | UI |
 | ----- | ----- | :-----: |
-| color--green | #2abbac | ![color_green](assets/color_green.png) |
-| color--red | #fb3548 | ![color_red](assets/color_red.png) |
-| color--blue | #4385f5 | ![color_blue](assets/color_blue.png) |
-| color--orange | #fa6f01 | ![color_orange](assets/color_orange.png) |
-| color--dark | #2e2e2e | ![color_dark](assets/color_dark.png) |
-| color--purple | #5d35b0 | ![color_purple](assets/color_purple.png) |
+| color--green | #2abbac | ![color_green](https://user-images.githubusercontent.com/50410774/103347063-de121980-4abb-11eb-908e-85a5056cf842.png) |
+| color--red | #fb3548 | ![color_red](https://user-images.githubusercontent.com/50410774/103347068-dfdbdd00-4abb-11eb-968a-89dd54a792b4.png) |
+| color--blue | #4385f5 | ![color_blue](https://user-images.githubusercontent.com/50410774/103347060-dbafbf80-4abb-11eb-8c6a-3a91290b5770.png) |
+| color--orange | #fa6f01 | ![color_orange](https://user-images.githubusercontent.com/50410774/103347064-deaab000-4abb-11eb-98c4-e50f8d475b85.png) |
+| color--dark | #2e2e2e | ![color_dark](https://user-images.githubusercontent.com/50410774/103347061-dce0ec80-4abb-11eb-8447-e79825b0ba00.png) |
+| color--purple | #5d35b0 | ![color_purple](https://user-images.githubusercontent.com/50410774/103347067-df434680-4abb-11eb-848c-5910c6346d61.png) |
 
 ## Options
 
